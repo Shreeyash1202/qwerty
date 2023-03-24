@@ -1,0 +1,62 @@
+
+.data{
+    position: absolute;
+    top: 120px;
+    left: 13%;
+    width: 35%;
+    height: 35%;
+}
+.database{
+    width: 100%;
+
+}
+.database1{
+    margin-top: 115%;
+    top: 170px;
+    width: 73%;
+}
+.database2{
+    margin-top: 170%;
+    margin-left: 15%;
+    top: 190px;
+    width: 50%;
+}
+.database3{
+    margin-top: 240%;
+    margin-left: 20%;
+    top: 190px;
+    width: 40%;
+}
+
+
+.text-container{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+
+}
+.text-container h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+.text-container a{
+    text-decoration: none;
+    background: #030d94;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+
+}
+.text-container a:hover{
+    background-color:rgb(230, 11, 11);
+    cursor: pointer;
+}
+.Avishkar{
+    max-width: 800px;
+    margin-top: 12%;
+    margin-left: 50%;
+
+}

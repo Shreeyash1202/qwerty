@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    margin: 0px;
+    font-family:'Poppins';
+    box-sizing: border-box;
+}
+span{
+    color:green;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    background-color: #21056f;
+    font-size: 1.2rem;
+}
+.nav-logo{
+    margin:0px 20px;
+    color: #fff;
+}
+
+.rightnav{
+    display: flex;
+
+}
+.rightnav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.rightnav ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 10px;
+}
+.rightnav ul li{
+    margin: 0px 10px;
+}
+.rightnav ul li a:hover{
+    color: #bdbdbd;
+}
+.login-btn,.signup-btn,.logout-btn{
+    font-size: 1.2rem;
+    margin: 0px 5px;
+    padding: 5px 8px;
+    border: 1px solid rgb(22, 3, 48);
+    background-color: rgb(38, 8, 91);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.login-btn:hover,.signup-btn:hover,.logout-btn:hover{
+    background-color:rgb(230, 11, 11);
+    cursor: pointer;
+}
+
+.logintxt{
+    padding: 8px;
+    color: #f6f6fa;
+}
+/* HOME */
+.home{
+    background: url('static/bg.jpg');
+    min-height:100vh;
+    background-size: cover;
+    padding: 40px 40px ;
+}
+.home-head{
+    text-align: center;
+    font-size: 3rem;
+    padding: 80px 0px;
+    text-shadow: 2px 2px rgb(67, 224, 64) ;
+    color: #003a0e;
+}
+.home-head p{
+    font-size: 1.5rem;
+}
+
+.homemain{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+.report,.seereport{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    background-color: #28a745;
+    border-radius: 15px;
+}
+.report p,.seereport p{
+    margin: 10px 0px;
+}
+
+.report-btn ,.seereport-btn{
+    padding: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color:#008920;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.report-btn:hover,.seereport-btn:hover{
+    background-color: #00771c;
+    cursor: pointer;
+}
+.notlogged{
+    margin: 40px 0px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* TRENDING */
+
+.about{
+    min-height: 9s0vh;
+    padding: 40px 40px;
+}
+.about h1{
+    font-size: 3.4rem;
+    margin: 40px 0px;
+    margin-bottom: 80px;
+    color: #28a745;
+    text-align: center;
+}
+
+.about-container{
+    margin: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.about-text{
+    width: 50%;
+}
+.about-text h1{
+    font-size: 2.3rem;
+    color: #28a745;
+    margin: 4px;
+    margin-bottom: 30px;
+
+    text-align: justify;
+}
+.about-text p{
+    font-size: 1.4rem;
+}
+.farmer-img,.abpage-img{
+    width: 500px;
+    border-radius: 20px;
+}
+
+
+/* REPORT PAGE */
+
+form{
+ /* min-height: 100vh; */
+ display: flex;
+ flex-direction: column;
+}
+form h1{
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 4px black;
+    margin: 10px 0px;
+    background: url("static/form.jpg");
+
+}
+.form-body{
+    min-height: 100vh;
+    margin: auto;
+    width: 100%;
+    padding: 100px;
+}
+input{
+    width: 100%;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+}
+select{
+    width: 100%;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.flexc{
+    display: flex;
+    width: 100%;
+    margin: 8px 10px;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.subbtn{
+    align-items: center;
+    width: 100%;
+    margin: 30px 0px;
+    color: #fff;
+    border: 0px;
+    border-radius: 8px;
+    background-color: #2f2261 ;
+    padding: 8px;
+}
+.subbtn:hover{
+    background-color: #1b048f;
+    cursor: pointer;
+}
+#alert{
+    width: 100%;
+    background-color: #3ab958;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.alert button{
+    padding: 2px 8px;
+    background-color: #003a0e;
+    color: #fff;
+}
+.alert button:hover{
+    cursor: pointer;
+    background-color: #00771c;
+}
+.alert-home{
+    padding-top: 61px;
+}
+/* INFO */
+
+.info{
+    min-height:100vh;
+    padding: 100px;
+}
+
+.info-head h1{
+    margin: 10px 0px;
+    text-shadow: 2px 4px black;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    text-transform: capitalize;
+    background: url("static/form.jpg");
+
+}
+
+.info-head p{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.info-head ul{
+    margin: 20px 0px;
+}
+
+.info-criteria{
+    margin: 40px 0px;
+}
+
+.info-h2{
+    font-size: 2rem;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.state-info{
+    margin-bottom: 20px;
+}
+table{
+    width: 100%;
+}
+
+table,th,td{
+    padding:3px;
+    border: 1px solid #008920;
+    text-align:center;
+}
+th{
+    text-transform: uppercase;
+    border: 2px solid #00771c;
+    font-size: 1.1rem;
+}
+
+/* ABOUT */
+
+.container{
+    min-height: 100vh;
+    padding: 80px;
+}
+.abpage-head{
+    font-size: 2.4rem;
+    color: #28a745;
+    text-align: center;
+    margin:30px 0px ;
+}
+.abpage-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+.abpage-desc{
+    padding: 0px 30px;
+}
+.abpage-desc p span{
+    font-size: 1.4rem;
+}
+.abpage-desc p{
+    font-size: 1.2rem;
+}
+
+.abpage-disc{
+    margin: 30px 0px;
+}
+
+
+/* LOGIN */
+
+.login-head,.signup-head{
+    margin: 30px 0px;
+    text-shadow: 2px 4px black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+    background: url("static/form.jpg");
+}
+.login-form,.signup-form{
+    padding: 40px;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+
+}
+.login-form input,.signup-form input{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+/* FOOTER */
+.foot{
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    background-color: #21056f;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+} 
