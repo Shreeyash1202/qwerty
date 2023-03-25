@@ -21,51 +21,67 @@
         <!-- NAVBAR -->
         <?php include 'partial/_header.php'?>
         <?php include 'partial/_dbconnect.php'?>
-      </div>
-        <!-- HOME -->
+    </div>
+    <!-- HOME -->
+    <div class="container">
 
-          <div class="data">
-            <img src="static/Screenshot 2023-02-06 003116.png" class="database">
+   
+    <div class="data">
+        <img src="static/Screenshot 2023-02-06 003116.png" class="database">
 
-        </div>
-        <div class="text-container">
-            <h1> Manage<br> Data Efficiently</h1>
-            <p>One stop destination to view store and mange data of
-              different techical events without having trouble
-            </p> 
-            <a href="partial/_login.php">Login for more info</a>
+    </div>
+    <div class="text-container">
+        <h1> Manage<br> Data Efficiently</h1>
+        <p>One stop destination to view store and mange data of
+            different techical events without having trouble
+        </p>
+        <a href="partial/_login.php">Login for more info</a>
 
-          
-        </div>
-        <br> <br> <br> <br><br>
+
+    </div>
+    </div>
+    <div class="typeOfhackathon">
         <div class="data">
-          <img src="static/Avishkar logo.jpg" class="database1">
+            <img src="static/Avishkar logo.jpg">
 
         </div>
         <div class="text-container">
-          <h1> Avishkar</h1>
-          <p>Institute is going to participate in Avishkar 2022 Competition. Avishkar is the State Level Inter-university Research Competition. An objective of this competition is to inculcate the research culture among the students and encourage them further to convert their ideas into physical reality.</p>
+            <h1> Avishkar</h1>
+            <p>Institute is going to participate in Avishkar 2022 Competition. Avishkar is the State Level
+                Inter-university
+                Research Competition. An objective of this competition is to inculcate the research culture among the
+                students and encourage them further to convert their ideas into physical reality.</p>
 
         </div>
+    </div>
+
+    <div class="typeOfhackathon">
         <div class="data">
-          <img src="static/Hackathon logo.jpg" class="database2">
+            <img src="static/Hackathon logo.jpg">
 
         </div>
         <div class="text-container">
-          <h1> Hackathon</h1>
-          <p>Institute is going to participate in Avishkar 2022 Competition. Avishkar is the State Level Inter-university Research Competition. An objective of this competition is to inculcate the research culture among the students and encourage them further to convert their ideas into physical reality.</p>
+            <h1> Hackathon</h1>
+            <p>Institute is going to participate in Avishkar 2022 Competition. Avishkar is the State Level
+                Inter-university
+                Research Competition. An objective of this competition is to inculcate the research culture among the
+                students and encourage them further to convert their ideas into physical reality.</p>
 
         </div>
+    </div>
+    <div class="typeOfhackathon">
         <div class="data">
-          <img src="static/deepblue logo.jpg" class="database3">
+            <img src="static/deepblue logo.jpg">
 
         </div>
         <div class="text-container">
-          <h1> Deeplue</h1>
-          <p>Institute is going to participate in Avishkar 2022 Competition. Avishkar is the State Level Inter-university Research Competition. An objective of this competition is to inculcate the research culture among the students and encourage them further to convert their ideas into physical reality.</p>
-          <
-          </div>
-
+            <h1> Deeplue</h1>
+            <p>Institute is going to participate in Avishkar 2022 Competition. Avishkar is the State Level
+                Inter-university
+                Research Competition. An objective of this competition is to inculcate the research culture among the
+                students and encourage them further to convert their ideas into physical reality.</p>
+             </div>
+        </div>
         <!-- FOOTER -->
         <?php include 'partial/_footer.php' ?>
 
@@ -74,8 +90,9 @@
 
 
 
-    
+
 
 
 </body>
+
 </html>
