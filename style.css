@@ -183,7 +183,7 @@ form h1{
     min-height: 100vh;
     margin: auto;
     width: 100%;
-    padding: 100px;
+    padding: 80px;
 }
 input{
     width: 100%;
@@ -248,7 +248,7 @@ select{
 
 .info{
     min-height:100vh;
-    padding: 100px;
+    padding: 80px;
 }
 
 .info-head h1{

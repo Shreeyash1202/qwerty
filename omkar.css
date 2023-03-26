@@ -1,0 +1,67 @@
+/* CSS file for info.php  */
+
+.row{
+    margin:30px
+}
+.column {
+float: left;
+margin-left:6%;
+width: 25%;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+.column {
+width: 100%;
+display: block;
+}
+}
+
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+min-height:330px;
+padding:20px;
+min-width:330px;
+border-radius:30px;
+}
+
+.butt-container {
+padding: 0 16px;
+}
+
+.butt-container::after, .row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.title {
+color: grey;
+}
+
+.button {
+border: none;
+margin:30px 0px;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #21056f;
+text-align: center;
+cursor: pointer;
+width: 100%;
+border-radius:30px;
+}
+a{
+text-decoration:none;
+}
+
+.button:hover {
+background-color: rgb(230, 11, 11);
+}
+h2{
+margin:10px;
+text-align: center;
+font-size:2rem;
+}
