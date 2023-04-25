@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data hub</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="tp.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/tp.css">
 </head>
 
 
@@ -27,7 +27,7 @@
 
    
     <div class="data">
-        <img src="static/Screenshot 2023-02-06 003116.png" class="database">
+        <img src="static/images/Screenshot 2023-02-06 003116.png" class="database">
 
     </div>
     <div class="text-container">
@@ -42,7 +42,7 @@
     </div>
     <div class="typeOfhackathon">
         <div class="data">
-            <img src="static/Avishkar logo.jpg">
+            <img src="static/images/Avishkar logo.jpg">
 
         </div>
         <div class="text-container">
@@ -57,7 +57,7 @@
 
     <div class="typeOfhackathon">
         <div class="data">
-            <img src="static/Hackathon logo.jpg">
+            <img src="static/images/Hackathon logo.jpg">
 
         </div>
         <div class="text-container">
@@ -71,7 +71,7 @@
     </div>
     <div class="typeOfhackathon">
         <div class="data">
-            <img src="static/deepblue logo.jpg">
+            <img src="static/images/deepblue logo.jpg">
 
         </div>
         <div class="text-container">

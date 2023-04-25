@@ -8,12 +8,14 @@ if($SERVER["REQUEST"]="POST"){
     $sql="SELECT * FROM `users` WHERE username='$username';";
     $result=mysqli_query($conn,$sql);
     $numRows=mysqli_num_rows($result);
+
     if($numRows==1){
         $row=mysqli_fetch_assoc($result);
         if($password==$row['user_pass']){
             session_start();
             $_SESSION['loggedin']=true;
             $_SESSION['username']=$username;
+            $_SESSION['role']=2;
             header("Location: /fg/index.php?login=true");
         }
         else{
