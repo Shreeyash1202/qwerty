@@ -41,6 +41,15 @@
                 <label for="password">Enter your Password</label>
                 <input type="password"  placeholder="Password" id="password" name="password" required>
 
+                <label for="role">Enter your Role</label>
+                    <select name="role" type="text" required="required" data-error="Please specify your need.">
+                        <option value="" selected disabled>
+                            --Select Your Answer--
+                        </option>
+                        <option >GUEST</option>
+                        <option >COORDINATOR</option>
+                        <option >HOD</option>
+                    </select>
                 <button type="submit" class="subbtn">Submit</button>
             </div>
         </form>
