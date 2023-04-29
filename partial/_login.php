@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <body>
@@ -18,11 +18,9 @@
         <div class="rightnav">
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="../report.php">Report</a></li>
                 <li><a href="../info.php">Info</a></li>
                 <li><a href="../about.php">About</a></li>
             </ul>
-            <a class="signup-btn" href="_signup.php">SignUp</a>
         </div>
     </div>
 
@@ -43,6 +41,15 @@
                 <label for="password">Enter your Password</label>
                 <input type="password"  placeholder="Password" id="password" name="password" required>
 
+                <label for="role">Enter your Role</label>
+                    <select name="role" type="text" required="required" data-error="Please specify your need.">
+                        <option value="" selected disabled>
+                            --Select Your Answer--
+                        </option>
+                        <option >GUEST</option>
+                        <option >COORDINATOR</option>
+                        <option >HOD</option>
+                    </select>
                 <button type="submit" class="subbtn">Submit</button>
             </div>
         </form>

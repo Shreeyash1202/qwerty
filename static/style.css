@@ -70,7 +70,7 @@ html{
 }
 /* HOME */
 .home{
-    background: url('static/bg.jpg');
+    background: url('images/bg.jpg');
     min-height:100vh;
     background-size: cover;
     padding: 40px 40px ;
@@ -85,7 +85,6 @@ html{
 .home-head p{
     font-size: 1.5rem;
 }
-
 .homemain{
     display: flex;
     color: #fff;
@@ -177,14 +176,14 @@ form h1{
     color: #ffffff;
     text-shadow: 2px 4px black;
     margin: 10px 0px;
-    background: url("static/form.jpg");
+    background: url("images/form.jpg");
 
 }
 .form-body{
     min-height: 100vh;
     margin: auto;
     width: 100%;
-    padding: 100px;
+    padding: 80px;
 }
 input{
     width: 100%;
@@ -249,7 +248,7 @@ select{
 
 .info{
     min-height:100vh;
-    padding: 100px;
+    padding: 80px;
 }
 
 .info-head h1{
@@ -259,7 +258,7 @@ select{
     font-size: 3rem;
     color: #fff;
     text-transform: capitalize;
-    background: url("static/form.jpg");
+    background: url("images/form.jpg");
 
 }
 
@@ -341,7 +340,7 @@ th{
     text-transform: uppercase;
     font-size: 3rem;
     color: #fff;
-    background: url("static/form.jpg");
+    background: url("images/form.jpg");
 }
 .login-form,.signup-form{
     padding: 40px;

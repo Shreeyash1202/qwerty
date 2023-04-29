@@ -1,38 +1,29 @@
 
+/* MADE MAJOR CHANGES  */
+/* Removes unnecessary css and classes from html and css file */
+/* removed home page bug */
+
+
 .data{
-    position: absolute;
-    top: 120px;
-    left: 13%;
-    width: 35%;
-    height: 35%;
+    min-width: 400px;
+    margin: auto;
 }
 .database{
     width: 100%;
 
 }
-.database1{
-    margin-top: 115%;
-    top: 170px;
-    width: 73%;
+.container{
+    display: flex;
+    height: 100vh;
 }
-.database2{
-    margin-top: 170%;
-    margin-left: 15%;
-    top: 190px;
-    width: 50%;
+.typeOfhackathon{
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.database3{
-    margin-top: 240%;
-    margin-left: 20%;
-    top: 190px;
-    width: 40%;
-}
-
-
 .text-container{
     max-width: 600px;
-    margin-top: 7%;
-    margin-left: 50%;
 
 }
 .text-container h1{

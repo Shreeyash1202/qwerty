@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info|Database</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/omkar.css">
 </head>
 
 <body>
@@ -22,26 +23,42 @@
         <?php
         if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]=true){
         echo '
-        <div class="info-criteria">
-            <form action="'.$_SERVER['REQUEST_URI'] .'" method="post">
-                <div class="form-row">
-                    <div class="flexc">
-                        <label class="state-info" for="form_need">Select a Events as per your requirement *</label>
-                        <select name="state" type="text" required="required" data-error="Please specify your need.">
-                            <option value="" selected disabled>
-                                --Select Your Events--
-                            </option>
-                            <option>Avishkar</option>
-                            <option>Deep Blue</option>
-                            <option>Hackathon</option>
-
-                        </select>
-                    </div>
-                    </div>
-                    <button type="submit" class="subbtn">Submit</button>
-            </form>
+        <div class="row">
+        <div class="column">
+          <div class="card">
+              <h2>Hackathon</h2>
+            <img width="180px" height="250px" src="static/Hackathon logo.jpg" alt="hackathon" style="width:100%">
+            <div class="butt-container">
+          
+              <p><a href="hackathon.php" class="button">More info</a></p>
+            </div>
+          </div>
         </div>
-    ';}else{
+      
+        <div class="column">
+          <div class="card">
+              <h2>Avishkar</h2>
+            <img width="180px" height="250px" src="static/Avishkar logo.jpg" alt="avishkar" style="width:100%">
+            <div class="butt-container">
+            
+              <p><a href="avishkar.php" class="button">More info</a></p> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+              <h2>Deepblue</h2>
+            <img width="180px" height="250px" src="static/deepblue logo.jpg" alt="deepblue" style="width:100%">
+            <div class="butt-container">
+        
+              <p><a href="deepblue.php" class="button">More info</a></p>
+            </div>
+          </div>
+        </div>
+      </div>      
+     ';
+    }else{
         echo'
         <div class="notlogged">
         <h2>*PLEASE LOGIN TO ACCESS THE REPORT*</h2>
