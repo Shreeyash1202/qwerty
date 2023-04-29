@@ -27,7 +27,7 @@
         <div class="column">
           <div class="card">
               <h2>Hackathon</h2>
-            <img width="180px" height="250px" src="static/Hackathon logo.jpg" alt="hackathon" style="width:100%">
+            <img width="180px" height="250px" src="static/images/Hackathon logo.jpg" alt="hackathon" style="width:100%">
             <div class="butt-container">
           
               <p><a href="hackathon.php" class="button">More info</a></p>
@@ -38,7 +38,7 @@
         <div class="column">
           <div class="card">
               <h2>Avishkar</h2>
-            <img width="180px" height="250px" src="static/Avishkar logo.jpg" alt="avishkar" style="width:100%">
+            <img width="180px" height="250px" src="static/images/Avishkar logo.jpg" alt="avishkar" style="width:100%">
             <div class="butt-container">
             
               <p><a href="avishkar.php" class="button">More info</a></p> 
@@ -49,7 +49,7 @@
         <div class="column">
           <div class="card">
               <h2>Deepblue</h2>
-            <img width="180px" height="250px" src="static/deepblue logo.jpg" alt="deepblue" style="width:100%">
+            <img width="180px" height="250px" src="static/images/deepblue logo.jpg" alt="deepblue" style="width:100%">
             <div class="butt-container">
         
               <p><a href="deepblue.php" class="button">More info</a></p>

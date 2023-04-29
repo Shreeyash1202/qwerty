@@ -31,7 +31,7 @@
             </div>
             <form>
                 <label for="temname">TEAM NAME :</label><br>
-                <input type="text" id="temname" name="fname"><br>
+                <input type="text" id="teamname" name="fname"><br>
                 <label for="falname">FACULTY NAME:</label><br>
                 <input type="text" id="falname" name="fname"><br>
                 <label for="yr">YEAR :</label><br>

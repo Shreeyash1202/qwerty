@@ -30,7 +30,7 @@
         <hr>
 
           <!-- Form -->
-        <form action="/fg/partial/_loginHandle.php" method="post">
+        <form action="/main/qwerty/partial/_loginHandle.php" method="post">
             <div class="login-form">
                 <label for="username">Enter your Username</label>
                 <input type="username"  id="username" placeholder="Username" name="username"
@@ -46,8 +46,8 @@
                         <option value="" selected disabled>
                             --Select Your Answer--
                         </option>
-                        <option >GUEST</option>
-                        <option >COORDINATOR</option>
+                        <option >Guest</option>
+                        <option >Coordinator</option>
                         <option >HOD</option>
                     </select>
                 <button type="submit" class="subbtn">Submit</button>
