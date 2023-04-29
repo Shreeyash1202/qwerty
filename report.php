@@ -26,7 +26,7 @@
             $level=$_POST['level;'];
             $govsub=$_POST['govsub'];
             $result=$_POST['results'];
-            $sql="INSERT INTO `report`(`fname`, `lname`, `work`, `event`, `dept`, `level`, `govsub`, `results`) VALUES ('$fname`, `$lname`, `$work`, `$event`, `$dept`, `$level`, `$govsub`, `$results`)";
+            $sql="INSERT INTO `report`(`fname`, `lname`, `work`, `event`, `dept`, `level`, `govsub`, `results`) VALUES ('$fname`, `$lname`, `$work`, `$event`, `$dept`, `$level`, `$govsub`, `$result`)";
             $result=mysqli_query($conn,$sql);
 
             $alert=true;
