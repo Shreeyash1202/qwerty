@@ -32,17 +32,9 @@
           <!-- Form -->
         <form action="/main/qwerty/partial/_loginHandle.php" method="post">
             <div class="login-form">
-                <label for="username">Enter your Username</label>
-                <input type="username"  id="username" placeholder="Username" name="username"
-                aria-describedby="emailHelp" required>
-                <div id="emailHelp" class="form-text"></div>
-                
-                
-                <label for="password">Enter your Password</label>
-                <input type="password"  placeholder="Password" id="password" name="password" required>
 
-                <label for="role">Enter your Role</label>
-                    <select name="role" type="text" required="required" data-error="Please specify your need.">
+            <label for="role">Enter your Role</label>
+                    <select name="role" type="text" required="required" data-error="Please specify your need." id="role">
                         <option value="" selected disabled>
                             --Select Your Answer--
                         </option>
@@ -50,6 +42,10 @@
                         <option >Coordinator</option>
                         <option >HOD</option>
                     </select>
+                    <div id="userDetails">
+                    
+                    </div>
+                
                 <button type="submit" class="subbtn">Submit</button>
             </div>
         </form>
@@ -58,6 +54,7 @@
 
 
     <?php include '_footer.php';?>
+    <script src="../static/script.js"></script>
 </body>
 
 </html>
