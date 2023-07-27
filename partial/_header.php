@@ -22,7 +22,7 @@ echo '
       elseif(isset($_SESSION["loggedin"])&&$_SESSION["loggedin"]==true&&$_SESSION['role']==1){
         echo'
         <ul>
-        <li><a href="report.php">Report</a></li>
+        <li><a href="details.php">Report</a></li>
         </ul>
         ';
       }
