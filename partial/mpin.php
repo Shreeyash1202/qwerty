@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mpin</title>
     <link rel="stylesheet" href="../static/style.css">
 </head>
 
@@ -26,26 +26,18 @@
 
 
     <div class="container">
-        <h1 class="login-head">Login</h1>
+        <h1 class="login-head">Mpin</h1>
         <hr>
 
           <!-- Form -->
-        <form action="/main/qwerty/partial/_loginHandle.php" method="post">
+        <form action="mpin_handler.php" method="post">
             <div class="login-form">
-
-            <label for="role">Enter your Role</label>
-                    <select name="role" type="text" required="required" data-error="Please specify your need." id="role">
-                        <option value="" selected disabled>
-                            --Select Your Answer--
-                        </option>
-                        <option >Guest</option>
-                        <option >Coordinator</option>
-                        <option >HOD</option>
-                    </select>
-                    <div id="userDetails">
-                    
-                    </div>
+        
                 
+                <label for="password">Enter your Mpin :</label>
+                <input type="password"  placeholder="mpin" id="mpin" name="mpin" required>
+
+              
                 <button type="submit" class="subbtn">Submit</button>
             </div>
         </form>
@@ -54,7 +46,6 @@
 
 
     <?php include '_footer.php';?>
-    <script src="../static/script.js"></script>
 </body>
 
 </html>

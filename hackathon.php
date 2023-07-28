@@ -29,13 +29,10 @@
                 <h1>Hackathon</h1>
 
             </div>
-            <form>
-                <label for="temname">TEAM NAME :</label><br>
-                <input type="text" id="teamname" name="fname"><br>
-                <label for="falname">FACULTY NAME:</label><br>
-                <input type="text" id="falname" name="fname"><br>
-                <label for="yr">YEAR :</label><br>
-                <select name="year" id="yr">
+            <form method="post">
+            <label for="yr">YEAR :</label><br>
+            <select name="year" id="yr">
+            
                     <option value="select">select year</option>
                     <option value="2018">2018</option>
                     <option value="2019">2019</option>
@@ -44,6 +41,12 @@
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
                 </select><br>
+                <label for="temname">TEAM NAME :</label><br>
+                <input type="text" id="teamname" name="fname"><br>
+                <label for="falname">FACULTY NAME:</label><br>
+                <input type="text" id="falname" name="fname"><br>
+                
+            
                 <button type="submit" class="subbtn">Submit</button>
 
             </form>
