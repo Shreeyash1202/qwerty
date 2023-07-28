@@ -78,7 +78,7 @@
             <a class="alinks active-link" onclick="openlink('Student')">Student details</a>
         </div>
 
-        <form action="S" method="post">
+        <form action="/main/qwerty/partial/_reportHandler.php" method="post">
             <div>
                 <div class="link-content active hidden" id="group">
                     <h4>Enter Group Details</h4>
@@ -92,6 +92,12 @@
                         <input type="team_name" id="team_name" name="team_name" placeholder="Team_name"
                             aria-describedby="emailHelp" required>
                         <br>
+
+                        <label for="project_title">Project Name*</label>
+                        <input type="project_title" id="project_title" name="project_title" placeholder="project_title"
+                            aria-describedby="emailHelp" required>
+                        <br>
+
                         <label for="event">Select The Event*</label><br>
                         <select name="event" type="text" required="required" data-error="Please specify your need.">
                             <option value="" selected disabled>
