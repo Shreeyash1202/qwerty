@@ -5,175 +5,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="static/style.css">
-    <title>Report|Data's Guide</title>
 </head>
+<style>
+    .about-container {
+        display: flex;
+    }
+
+    .about-links {
+        margin-top: 30px;
+    }
+
+
+    .about-links .active-link {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+
+    .about-links a {
+        text-decoration: none;
+        color: blue;
+        font-weight: bold;
+        margin: 0px 10px;
+        transition: 0.5s;
+    }
+
+    .about-links a:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+    .link-content {
+        margin-top: 20px;
+        display: none;
+    }
+
+    .link-content.active {
+        display: block;
+    }
+
+    .about-text {
+        min-width: min-content;
+        padding: 40px;
+        color: #fff;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .about-head {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 30px;
+        color: #fff;
+        margin: 30px 0px;
+        margin-bottom: 80px;
+    }
+</style>
 
 <body>
-    <!-- NAVBAR -->
-    <?php include 'partial/_header.php'?>
-    <?php include 'partial/_dbconnect.php'?>
-
-    <?php
-    $alert=false;
-    $method=$_SERVER['REQUEST_METHOD'];
-    if($method=='POST'){
-            $fname=$_POST['first_name'];
-            $lname=$_POST['surname'];
-            $work=$_POST['work'];
-            $event=$_POST['event'];
-            $dept=$_POST['dept'];
-            $level=$_POST['level;'];
-            $govsub=$_POST['govsub'];
-            $result=$_POST['results'];
-            $sql="INSERT INTO `report`(`fname`, `lname`, `work`, `event`, `dept`, `level`, `govsub`, `results`) VALUES ('$fname`, `$lname`, `$work`, `$event`, `$dept`, `$level`, `$govsub`, `$result`)";
-            $result=mysqli_query($conn,$sql);
-
-            $alert=true;
-            
-
-            
-        } ?>
-
-    <div class="form-body">
-        <?php 
-       echo '
-            
-        <form action="'.$_SERVER['REQUEST_URI'].'" method="post">
-            <h1>REPORT</h1>';
-            if($alert){
-                echo '
-                <div class="alert">
-                <p id="alert">
-                Response Recorded <button type="button"onclick="closealert()">X</button></p>
-            </div>
-                ';};
+    <?php include 'partial/_header.php' ?>
 
 
-            if(isset($_SESSION["loggedin"])&&$_SESSION["loggedin"]=true){
-            echo '<hr>
-            <div class="form-row">
-                <div class="flexc">
-                    <label for="form_name">Firstname *</label>
-                    <input type="text" name="first_name" placeholder="Please enter your firstname *" required="required"
-                        data-error="Firstname is required." />
-                </div>
-                <div class="flexc">
+    <div class="container">
+        <h1 class="signup-head">Group Details</h1>
+        <hr>
 
-                    <label for="form_lastname">Lastname *</label>
-                    <input type="text" name="surname" placeholder="Please enter your lastname *" required="required"
-                        data-error="Lastname is required." />
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="flexc">
-
-                    <label for="form_need">Worked as*</label>
-                    <select name="work" type="text" required="required" data-error="Please specify your need.">
-                        <option value="" selected disabled>
-                            --Select Your Role--
-                        </option>
-                        <option>HOD</option>
-                        <option>TEACHER</option>
-                    </select>
-                </div>
-                <div class="flexc">
-                    <label for="form_need">Event *</label>
-                    <select name="state" type="text" required="required" data-error="Please specify your need.">
-                        <option value="" selected disabled>
-                            --Select Your EVENT--
-                        </option>
-                        <option>Avishkar</option>
-                        <option>Deep Blue</option>
-                        <option>Hackathon</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="flexc">
-                    <label for="form_need">Select The Department*</label>
-                    <select name="crop" type="text" required="required" data-error="Please specify your need.">
-                        <option value="" selected disabled>
-                            --Select Your Department--
-                        </option>
-                        <option>CS</option>
-                        <option>IT</option>
-                        <option>EXTC</option>
-                        <option>ECS</option>
-                        <option>MECH</option>
-                        <option>AUTOMOBILE</option>
-                    </select>
-                </div>
-                <div class="flexc">
-
-
-                    <label for="form_need">LEVEL*</label>
-                    <select name="fertilizer" type="text" required="required" data-error="Please specify your need.">
-                        <option value="" selected disabled>
-                            --Select Your Level--
-                        </option>
-                        <option>UG</option>
-                        <option>PG</option>
-                        <option>PHD</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="flexc">
-                    <label for="form_need">RESULTS*</label>
-                    <select name="crop_use" type="text" required="required" data-error="Please specify your need.">
-                        <option value="" selected disabled>
-                            --Select Your Results--
-                        </option>
-                        <option>WINNERS Use</option>
-                        <option>1ST RUNNER UP</option>
-                        <option>2ST RUNNER UP</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-
-                <div class="flexc">
-
-
-                    <label for="form_need">Used Government Subsidy*</label>
-                    <select name="gov_sub" type="text" required="required" data-error="Please specify your need.">
-                        <option value="" selected disabled>
-                            --Select Your Answer--
-                        </option>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </select>
-                </div>
-            </div>  
-            <button type="submit" class="subbtn">Submit</button>
-        </form>';
-        }
-        else{
-            echo '<hr><div class="notlogged">
-            
-            <h2>*PLEASE LOGIN TO REPORT YOUR DATA*</h2>
-            <p>Login or signup in the Navigation bar</p>
-            </div>';
-        }
-        ?>
-        <div class="report-desc">
-            <p>
-                <hr>
-                <br>
-                <h3>NOTE:</h3>
-                <br>
-                <ul>
-                    <li>Please Enter correct information.</li>
-                    <li>If you are entering on someones behalf then please verify all the details.</li>
-                    <li>Your data is valuable to us and also for anyone who is interested in it so please be honest.</li>
-                    <li>By filling the form you accept all our terms and conditions.</li>
-                </ul>
-            </p>
+        <div class="about-links">
+            <a class="alinks active-link" onclick="openlink('group')">Group details</a>
+            <a class="alinks active-link" onclick="openlink('mentor' )">Mentor details</a>
+            <a class="alinks active-link" onclick="openlink('Student')">Student details</a>
         </div>
-    </div>
-    <?php include 'partial/_footer.php'?>
 
+        <form action="S" method="post">
+            <div>
+                <div class="link-content active hidden" id="group">
+                    <h4>Enter Group Details</h4>
+                    <!-- SIGNUP FORM -->
+                    <div class="signup-form">
+                        <label for="g_id">Group ID*</label>
+                        <input type="g_id" id="g_id" name="g_id" placeholder="Gruop_id" aria-describedby="emailHelp"
+                            required>
+
+                        <label for="team_name">Team Name*</label>
+                        <input type="team_name" id="team_name" name="team_name" placeholder="Team_name"
+                            aria-describedby="emailHelp" required>
+                        <br>
+                        <label for="event">Select The Event*</label><br>
+                        <select name="event" type="text" required="required" data-error="Please specify your need.">
+                            <option value="" selected disabled>
+                                --Select Your Event--
+                            </option>
+                            <?php
+                            if ($_SESSION['hackathon'] == "Avishkar") {
+                                echo '
+                            <option>Avishkar</option>';
+                            } else if ($_SESSION['hackathon'] == "Hackathon") {
+                                echo '
+                            <option>Hackathon</option>';
+                            } else if ($_SESSION['hackathon'] == "Deepblue") {
+                                echo '
+                            <option>DeepBlue</option>';
+                            }
+                            ?>
+
+                        </select>
+
+                        <br><br>
+                        <label for="year">Year :</label><br>
+                        <select name="year" id="yr">
+                            <option value="select">select year</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select><br><br>
+
+                        <label for="results">Results :</label><br>
+                        <input type="results" id="results" name="results" placeholder="results" required>
+                        <button type="button" onclick="openlink('mentor')" class="subbtn">Next</button>
+                    </div>
+                </div>
+
+                <!-- MENTOR DETAILS -->
+                <div class="link-content hidden" id="mentor">
+                    <h4>Enter Mentor Details</h4>
+                    <div class="signup-form">
+                        <label for="M_id">Mentor ID*</label>
+                        <input type="M_id" id="M_id" name="M_id" placeholder="M_id" aria-describedby="emailHelp"
+                            required>
+
+                        <label for="M_name">Mentor Name*</label>
+                        <input type="M_name" id="M_name" name="M_name" placeholder="M_name" aria-describedby="emailHelp"
+                            required>
+                        <br>
+                        <label for="M_PH_no">Mentor Mobile number*</label>
+                        <input type="M_PH_no" id="M_PH_no" name="M_PH_no" placeholder="M_PH_no"
+                            aria-describedby="emailHelp" required>
+                        <br>
+                        <label for="M_email">Mentor Email id*</label>
+                        <input type="M_email" id="M_email" name="M_email" placeholder="M_email"
+                            aria-describedby="emailHelp" required>
+                        <br>
+                        <button type="button" onclick="openlink('Student')" class="subbtn">Next</button>
+                    </div>
+                </div>
+
+                <!-- STUDENT DETAILS -->
+                <div class="link-content hidden" id="Student">
+
+                    <div class="signup-form">
+                        <h4>Enter Student Details Details</h4>
+                        <label for="sno">Enter total no of group members *</label>
+                        <select name="sno" id="sno" required>
+                            <option value="">--Select number of students--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select><br><br>
+                        <div class="addStudents">
+
+                        </div>
+                        <button type="submit" class="subbtn">Submit</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+
+
+    </div>
+    </form>
+    <hr>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
