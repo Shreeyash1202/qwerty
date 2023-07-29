@@ -78,7 +78,7 @@
             <a class="alinks active-link" onclick="openlink('Student')">Student details</a>
         </div>
 
-        <form action="S" method="post">
+        <form action="/main/qwerty/partial/_reportHandler.php" method="post">
             <div>
                 <div class="link-content active hidden" id="group">
                     <h4>Enter Group Details</h4>
@@ -92,6 +92,12 @@
                         <input type="team_name" id="team_name" name="team_name" placeholder="Team_name"
                             aria-describedby="emailHelp" required>
                         <br>
+
+                        <label for="project_title">Project Name*</label>
+                        <input type="project_title" id="project_title" name="project_title" placeholder="project_title"
+                            aria-describedby="emailHelp" required>
+                        <br>
+
                         <label for="event">Select The Event*</label><br>
                         <select name="event" type="text" required="required" data-error="Please specify your need.">
                             <option value="" selected disabled>
@@ -126,8 +132,11 @@
 
                         <label for="results">Results :</label><br>
                         <input type="results" id="results" name="results" placeholder="results" required>
+                        <button type="button" onclick="openlink('mentor')" class="subbtn">Next</button>
                     </div>
                 </div>
+
+                <!-- MENTOR DETAILS -->
                 <div class="link-content hidden" id="mentor">
                     <h4>Enter Mentor Details</h4>
                     <div class="signup-form">
@@ -147,47 +156,28 @@
                         <input type="M_email" id="M_email" name="M_email" placeholder="M_email"
                             aria-describedby="emailHelp" required>
                         <br>
+                        <button type="button" onclick="openlink('Student')" class="subbtn">Next</button>
                     </div>
                 </div>
+
+                <!-- STUDENT DETAILS -->
                 <div class="link-content hidden" id="Student">
 
                     <div class="signup-form">
                         <h4>Enter Student Details Details</h4>
                         <label for="sno">Enter total no of group members *</label>
-                        <input type="sno" id="sno" name="sno" placeholder="sno" aria-describedby="emailHelp" required>
+                        <select name="sno" id="sno" required>
+                            <option value="">--Select number of students--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select><br><br>
+                        <div class="addStudents">
 
-
-
-                        <label for="M_id">Student ID*</label>
-                        <h4>Enter student Details</h4>
-                        <input type="M_id" id="M_id" name="M_id" placeholder="M_id" aria-describedby="emailHelp"
-                            required>
-
-                        <label for="s_name">Student Name*</label>
-                        <input type="s_name" id="s_name" name="s_name" placeholder="s_name" aria-describedby="emailHelp"
-                            required>
-                        <br>
-                        <label for="dept">Select The Department*</label> <br>
-                        <select name="dept" type="text" required="required" data-error="Please specify your need.">
-                            <option value="" selected disabled>
-                                --Select Your Department--
-                            </option>
-                            <option>CS</option>
-                            <option>IT</option>
-                            <option>EXTC</option>
-                            <option>ECS</option>
-                            <option>MECH</option>
-                            <option>AUTOMOBILE</option>
-                        </select>
-                        <br>
-                        <label for="S_PH_no">Student Mobile number*</label>
-                        <input type="S_PH_no" id="S_PH_no" name="S_PH_no" placeholder="S_PH_no"
-                            aria-describedby="emailHelp" required>
-                        <br>
-                        <label for="S_email">Student Email id*</label>
-                        <input type="S_email" id="S_email" name="S_email" placeholder="S_email"
-                            aria-describedby="emailHelp" required>
-                        <br>
+                        </div>
                         <button type="submit" class="subbtn">Submit</button>
                     </div>
                 </div>

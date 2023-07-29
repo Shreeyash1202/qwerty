@@ -5,7 +5,6 @@ if ($SERVER["REQUEST"] = "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $role = $_POST['role'];
-    
 
     // If selected role is coordinator
     if ($role == 'Coordinator') {
@@ -29,7 +28,7 @@ if ($SERVER["REQUEST"] = "POST") {
                     $role = 0;
                 } elseif ($role == 'Coordinator') {
                     $role = 1;
-                    $_SESSION['hackathon'] = $hackathon;   
+                    $_SESSION['hackathon'] = $hackathon;
                 } elseif ($role == 'HOD') {
                     $role = 2;
                 }
