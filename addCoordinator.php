@@ -7,6 +7,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
+
+<style>
+   
+    .success-message {
+        color: green;
+        margin-top: 10px;
+    }
+
+    .error-message {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
 <body>
 <?php include 'partial/_header.php'?>
 
@@ -15,7 +28,7 @@
     <h1 class="signup-head">Add Coordinator </h1>
         <hr>
     <!-- SIGNUP FORM -->
-        <form action ="/main/qwerty/partial/_signupHandler.php"  method="post">
+        <form action ="/main/qwerty/partial/_signupHandler.php"  method="post" >
             <div class="signup-form">
                 <label for="username" >Username*</label>
                 <input type="username"  id="username" name="username" placeholder="Username" aria-describedby="emailHelp" required>
@@ -91,3 +104,5 @@
 </html>
 
     
+
+

@@ -58,7 +58,7 @@ if ($SERVER["REQUEST"] = "POST") {
 
 
             if ($conn->query($sql) === TRUE) {
-                header("Location:../index.php?insert=true");
+                header("Location:_redirect.html?insert=true");
                 exit();
             } else {
                 $error = "cannot insert student data: ";

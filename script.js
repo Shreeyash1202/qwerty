@@ -71,4 +71,4 @@ studentNo.addEventListener("change", () => {
     let studentBlock = createStudentDiv();
     studentRepeat.appendChild(studentBlock);
   }
-});
+});               

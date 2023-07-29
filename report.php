@@ -78,9 +78,9 @@
             <a class="alinks active-link" onclick="openlink('Student')">Student details</a>
         </div>
 
-        <form action="/main/qwerty/partial/_reportHandler.php" method="post">
+        <form action="/main/qwerty/partial/_reportHandler.php"  method="post" id="groupForm">
             <div>
-                <div class="link-content active hidden" id="group">
+                <div class="link-content active hidden"  >
                     <h4>Enter Group Details</h4>
                     <!-- SIGNUP FORM -->
                     <div class="signup-form">
@@ -178,7 +178,7 @@
                         <div class="addStudents">
 
                         </div>
-                        <button type="submit" class="subbtn">Submit</button>
+                        <button type="submit" class="subbtn" >Submit</button>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     </style>
 </head>
 
+
 <body>
     <?php include 'partial/_header.php' ?>
     <div class="info-criteria">
@@ -22,6 +24,7 @@
                 <h1>Avishkar</h1>
             </div>
 
+
             <?php
             // Establish database connection
             $servername = "localhost";
@@ -29,19 +32,23 @@
             $password = "";
             $dbname = "hack";
 
+
             // Create a connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
+
 
             // Check the connection
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
 
+
             // Initialize variables to store search criteria
             $year = "";
             $g_id = "";
             $project_title = "";
             $event = "Avishkar"; // Default event value
+
 
             // Check if the form is submitted
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -51,6 +58,7 @@
                 $project_title = $_POST["project_title"];
                 $event = $_POST["event"];
 
+
                 // Perform the SELECT query with the user's input as the conditions
                 $sql = "SELECT * FROM `group` AS g
                         JOIN `mentor` AS m ON g.M_id = m.M_id
@@ -58,13 +66,16 @@
                         WHERE g.year = '$year' AND g.g_id = '$g_id' AND g.project_title LIKE '%$project_title%'
                         AND g.hack_event = '$event'";
 
+
                 // Execute the query
                 $result = mysqli_query($conn, $sql);
+
 
                 // Check if there are any rows returned
                 if (mysqli_num_rows($result) > 0) {
                     // Initialize an array to keep track of displayed group IDs
                     $displayedGroupIds = array();
+
 
                     echo "<h1>Search Results</h1>";
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -82,6 +93,7 @@
                             $displayedGroupIds[] = $row["g_id"];
                         }
 
+
                         // Display student information for each group (no need to check for duplicates here)
                         echo "<br>";
                         echo "<p>Student Name: " . $row["s_name"] . "</p>";
@@ -98,37 +110,51 @@
             }
             ?>
 
+
+            <?php
+            if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]==true){
+             echo'
             <!-- Search form -->
             <form method="post">
                 <label for="year">Year:</label>
                 <select name="year" id="yr">
                     <option value="select">Select Year</option>
-                    <option value="2018" <?php if ($year === '2018') echo 'selected'; ?>>2018</option>
-                    <option value="2019" <?php if ($year === '2019') echo 'selected'; ?>>2019</option>
-                    <option value="2020" <?php if ($year === '2020') echo 'selected'; ?>>2020</option>
-                    <option value="2021" <?php if ($year === '2021') echo 'selected'; ?>>2021</option>
-                    <option value="2022" <?php if ($year === '2022') echo 'selected'; ?>>2022</option>
-                    <option value="2023" <?php if ($year === '2023') echo 'selected'; ?>>2023</option>
+                    <option value="2018" >2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
                 </select>
                 <label for="g_id">Group ID:</label>
-                <input type="text" name="g_id" id="g_id" value="<?php echo htmlspecialchars($g_id); ?>">
+                <input type="text" name="g_id" id="g_id" >
                 <label for="project_title">Project Title:</label>
-                <input type="text" name="project_title" id="project_title" value="<?php echo htmlspecialchars($project_title); ?>">
+                <input type="text" name="project_title" id="project_title">
                 <br>
+
 
                 <!-- Dropdown menu for event selection -->
                 <label for="event">Select Event:</label>
                 <select name="event" id="event">
-                    <option value="Avishkar" <?php if ($event === 'Avishkar') echo 'selected'; ?>>Avishkar</option>
+                    <option value="Avishkar">Avishkar</option>
                     <!-- Add more options for different events -->
                 </select>
                 <br>
 
+
                 <button type="submit" class="subbtn">Search</button>
-            </form>
+            </form>';
+             } else{
+                echo '<h1>Log in to access the info</h1>';
+            }
+            ?>
         </div>
     </div>
-    
+   
 </body>
 
+
 </html>
+
+
+

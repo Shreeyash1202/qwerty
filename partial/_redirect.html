@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Record Inserted Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .success-message {
+            font-size: 24px;
+            color: green;
+            margin-bottom: 20px;
+        }
+        .add-data-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+        <img src="tick.gif">
+    <div class="success-message">
+        
+        Your record has been successfully inserted!
+    </div>
+    <button class="add-data-button" onclick="redirectToForm()">Add More Data</button>
+
+    <script>
+        function redirectToForm() {
+            // You can replace "form.html" with the URL of your data entry form
+            window.location.href = "../report.php";
+        }
+    </script>
+</body>
+</html>
