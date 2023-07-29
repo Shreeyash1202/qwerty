@@ -25,7 +25,7 @@ if ($SERVER["REQUEST"] = "POST") {
 
     // insert mentor details
     if ($result) {
-        $sql_mentor = "INSERT INTO `mentor` (m_id,m_name, ph_no,email, g_id) VALUES ('$m_id', '$m_name', '$m_PH_no', '$m_email', '$g_id')";
+        $sql_mentor = "INSERT INTO `mentor` (m_id,m_name, m_ph_no,m_email, g_id) VALUES ('$m_id', '$m_name', '$m_PH_no', '$m_email', '$g_id')";
 
         if ($conn->query($sql_mentor) === TRUE) {
             $students_data = array();
@@ -43,7 +43,7 @@ if ($SERVER["REQUEST"] = "POST") {
                     "s_name" => $s_name,
                     "dept" => $dept,
                     "ph_no" => $s_PH_no,
-                    "email" => $s_email
+                    "s_email" => $s_email
                 );
 
                 // Add the student details array to the main array
@@ -54,7 +54,7 @@ if ($SERVER["REQUEST"] = "POST") {
             foreach ($students_data as $student) {
                 $values[] = "('" . implode("', '", $student) . "')";
             }
-            $sql = "INSERT INTO `student` (s_id,g_id,s_name,dept, ph_no,email) VALUES".implode(", ", $values);
+            $sql = "INSERT INTO `student` (s_id,g_id,s_name,dept, s_ph_no,s_email) VALUES".implode(", ", $values);
 
 
             if ($conn->query($sql) === TRUE) {
