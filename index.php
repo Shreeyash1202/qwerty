@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,9 +13,13 @@
 
 
 
+
+
+
 <!-- LINKED TABLE TO REPORT -->
 <!-- WRITING ALERT IN HOME OPEN XAMPP AND SEE USERS AND TABLE -->
 <!-- NOT INSERTED ANY DATA YET -->
+
 
 <body>
     <div class="main">
@@ -25,9 +30,11 @@
     <!-- HOME -->
     <div class="container">
 
+
    
     <div class="data">
         <img src="static/images/Screenshot 2023-02-06 003116.png" class="database">
+
 
     </div>
     <div class="text-container">
@@ -35,7 +42,14 @@
         <p>One stop destination to view store and mange data of
             different techical events without having trouble
         </p>
-        <a href="partial/_login.php">Login for more info</a>
+        <?php
+        if(!isset($_SESSION['loggedin']) || $_SESSION["loggedin"]!=true){
+        echo'
+        <a href="partial/_login.php">Login for more info</a>';
+        }
+        ?>
+
+
 
 
     </div>
@@ -43,6 +57,7 @@
     <div class="typeOfhackathon">
         <div class="data">
             <img src="static/images/Avishkar logo.jpg">
+
 
         </div>
         <div class="text-container">
@@ -52,12 +67,15 @@
                 Research Competition. An objective of this competition is to inculcate the research culture among the
                 students and encourage them further to convert their ideas into physical reality.</p>
 
+
         </div>
     </div>
+
 
     <div class="typeOfhackathon">
         <div class="data">
             <img src="static/images/Hackathon logo.jpg">
+
 
         </div>
         <div class="text-container">
@@ -67,11 +85,13 @@
                 Research Competition. An objective of this competition is to inculcate the research culture among the
                 students and encourage them further to convert their ideas into physical reality.</p>
 
+
         </div>
     </div>
     <div class="typeOfhackathon">
         <div class="data">
             <img src="static/images/deepblue logo.jpg">
+
 
         </div>
         <div class="text-container">
@@ -85,6 +105,7 @@
         <!-- FOOTER -->
         <?php include 'partial/_footer.php' ?>
 
+
     </div>
     <script src="script.js"></script>
 
@@ -93,6 +114,16 @@
 
 
 
+
+
+
+
+
+
 </body>
 
+
 </html>
+
+
+

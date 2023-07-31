@@ -23,8 +23,12 @@
             </ul>
         </div>
     </div>
-
-
+    
+    <?php
+    session_start();
+    // Only display the page content if $login is true
+    if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]=true){
+    ?>
     <div class="container">
         <h1 class="login-head">Mpin</h1>
         <hr>
@@ -43,8 +47,15 @@
         </form>
         <hr>
     </div>
-
-
+    <?php
+    } else {
+         echo'
+        <div class="notlogged">
+        <h2>*Access Denied *</h2>
+           <p>Please login <p> 
+        </div>';
+    }
+    ?>
     <?php include '_footer.php';?>
 </body>
 
