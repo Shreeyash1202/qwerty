@@ -11,21 +11,9 @@
 
 <body>
   <!-- NAVBAR -->
-    <div class="navbar">
-        <div class="nav-logo">
-            <h3>Data Hub</h3>
-        </div>
-        <div class="rightnav">
-            <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../info.php">Info</a></li>
-                <li><a href="../about.php">About</a></li>
-            </ul>
-        </div>
-    </div>
+  <?php include '../components/_header.php'?>
     
     <?php
-    session_start();
     // Only display the page content if $login is true
     if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]=true){
     ?>
@@ -34,7 +22,7 @@
         <hr>
 
           <!-- Form -->
-        <form action="_mpin_handler.php" method="post">
+        <form action="../service/_mpin_handler.php" method="post">
             <div class="login-form">
         
                 
@@ -56,7 +44,7 @@
         </div>';
     }
     ?>
-    <?php include '_footer.php';?>
+    <?php include '../components/_footer.php' ?>
 </body>
 
 </html>

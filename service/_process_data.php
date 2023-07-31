@@ -1,6 +1,6 @@
 <!-- process_data.php -->
 <?php
-include 'partial/_dbconnect.php';
+include '_dbconnect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $team_name = $_POST['team_name'];
@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $year = $_POST['year'];
 
     // Perform database query to fetch data based on the submitted form data
-    $sql = "SELECT * FROM events WHERE team_name='$team_name' AND faculty_name='$faculty_name' AND year='$year'";
+    $sql = "SELECT * FROM events WHERE team_name='$team_name' AND faculty_name='$faculty_name' AND year='$year' AND event='$event'";
     $result = mysqli_query($conn, $sql);
 
     // Check if data is available

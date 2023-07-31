@@ -46,12 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if (!$mentor_result) {
                 $error = "cannot insert mentor data: ";
-                header("Location: /qwerty/index.php?insertMentor=false&error=$error");
+                header("Location: /qwerty/pages/index.php?insertMentor=false&error=$error");
                 exit();
             }
         } else {
             $error = "cannot insert group data: ";
-            header("Location: /qwerty/index.php?insertGroup=false&error=$error");
+            header("Location: /qwerty/pages/index.php?insertGroup=false&error=$error");
             exit();
         }
     }
@@ -86,11 +86,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql = "INSERT INTO `student` (s_id, g_id, s_name, dept, s_ph_no, s_email) VALUES " . implode(", ", $values);
 
     if ($conn->query($sql) === TRUE) {
-        header("Location:_redirect.php?insert=true");
+        header("Location:../components/_redirect.php?insert=true");
         exit();
     } else {
         $error = "cannot insert student data: ";
-        header("Location: /qwerty/index.php?insertStudent=false&error=$error");
+        header("Location: /qwerty/pages/index.php?insertStudent=false&error=$error");
     }
 }
 ?>

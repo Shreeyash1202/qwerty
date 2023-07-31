@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <style>
     .about-container {
@@ -65,7 +65,7 @@
 </style>
 
 <body>
-   <?php include 'partial/_header.php' ?>
+   <?php include '../components/_header.php'?>
    <?php
     // Only display the page content if $login is true
     if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]=true){
@@ -84,28 +84,28 @@
             <a class="alinks active-link" onclick="openlink('Student')">Student details</a>
         </div>
         
-        <form action="/main/qwerty/partial/_reportHandler.php"  method="post" id="groupForm">
+        <form action="/main/qwerty/service/_reportHandler.php"  method="post" id="groupForm">
       <div>
-                <div class="link-content active hidden"  >
+                <div class="link-content active hidden"  id="group">
                     <h4>Enter Group Details</h4>
                     <!-- SIGNUP FORM -->
                     <div class="signup-form">
                         <label for="g_id">Group ID*</label>
-                        <input type="g_id" id="g_id" name="g_id" placeholder="Gruop_id" aria-describedby="emailHelp"
+                        <input type="g_id" id="g_id" name="g_id" placeholder="Group ID starts with event year eg. 20223E124" aria-describedby="emailHelp"
                             required>
 
                         <label for="team_name">Team Name*</label>
-                        <input type="team_name" id="team_name" name="team_name" placeholder="Team_name"
+                        <input type="team_name" id="team_name" name="team_name" placeholder="Team name"
                             aria-describedby="emailHelp" required>
                         <br>
 
                         <label for="project_title">Project Name*</label>
-                        <input type="project_title" id="project_title" name="project_title" placeholder="project_title"
+                        <input type="project_title" id="project_title" name="project_title" placeholder="Title of your Project"
                             aria-describedby="emailHelp" required>
                         <br>
 
                         <label for="event">Select The Event*</label><br>
-                        <select name="event" type="text" required="required" data-error="Please specify your need.">
+                        <select name="event" type="text" required="required" data-error="Please Select your event">
                             <option value="" selected disabled>
                                 --Select Your Event--
                             </option>
@@ -129,7 +129,7 @@
                         <br><br>
                         <label for="year">Year :</label><br>
                         <select name="year" id="yr">
-                            <option value="select">select year</option>
+                            <option value="select">--Select Year--</option>
                             <option value="2018">2018</option>
                             <option value="2019">2019</option>
                             <option value="2020">2020</option>
@@ -139,7 +139,7 @@
                         </select><br><br>
 
                         <label for="results">Results :</label><br>
-                        <input type="results" id="results" name="results" placeholder="results" required>
+                        <input type="results" id="results" name="results" placeholder="Enter the result eg. Winner, 2nd" required>
                         <button type="button" onclick="openlink('mentor')" class="subbtn">Next</button>
                     </div>
                 </div>
@@ -150,19 +150,19 @@
                     <h4>Enter Mentor Details</h4>
                     <div class="signup-form">
                         <label for="M_id">Mentor ID*</label>
-                        <input type="M_id" id="M_id" name="M_id" placeholder="M_id" aria-describedby="emailHelp"
+                        <input type="M_id" id="M_id" name="M_id" placeholder="Mentor ID eg. 2021PE0275" aria-describedby="emailHelp"
                             required>
 
                         <label for="M_name">Mentor Name*</label>
-                        <input type="M_name" id="M_name" name="M_name" placeholder="M_name" aria-describedby="emailHelp"
+                        <input type="M_name" id="M_name" name="M_name" placeholder="Full name of Mentor" aria-describedby="emailHelp"
                             required>
                         <br>
                         <label for="M_PH_no">Mentor Mobile number*</label>
-                        <input type="M_PH_no" id="M_PH_no" name="M_PH_no" placeholder="M_PH_no"
+                        <input type="M_PH_no" id="M_PH_no" pattern="^[0-9]{10,}$" name="M_PH_no" placeholder="Mentor Mobile number"
                             aria-describedby="emailHelp" required>
                         <br>
                         <label for="M_email">Mentor Email id*</label>
-                        <input type="M_email" id="M_email" name="M_email" placeholder="M_email"
+                        <input type="M_email" id="M_email" name="M_email" placeholder="Mentor Email id"
                             aria-describedby="emailHelp" required>
                         <br>
                         <button type="button" onclick="openlink('Student')" class="subbtn">Next</button>
@@ -172,8 +172,8 @@
                 <!-- STUDENT DETAILS -->
                 <div class="link-content hidden" id="Student">
 
+                    <h4>Enter Student Details</h4>
                     <div class="signup-form">
-                        <h4>Enter Student Details Details</h4>
                         <label for="sno">Enter total no of group members *</label>
                         <select name="sno" id="sno" required>
                             <option value="">--Select number of students--</option>
@@ -188,6 +188,7 @@
 
                         </div>
                         <button type="submit" class="subbtn" >Submit</button>
+                        <p style="text-align:center">If form  doesn't Submit please check if all fields are entered properly</p>
                     </div>
                 </div>
             </div>
@@ -202,7 +203,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <?php
     } else {
          echo'

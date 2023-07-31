@@ -7,14 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data hub</title>
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="static/tp.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/tp.css">
 </head>
-
-
-
-
-
 
 <!-- LINKED TABLE TO REPORT -->
 <!-- WRITING ALERT IN HOME OPEN XAMPP AND SEE USERS AND TABLE -->
@@ -24,39 +19,33 @@
 <body>
     <div class="main">
         <!-- NAVBAR -->
-        <?php include 'partial/_header.php'?>
-        <?php include 'partial/_dbconnect.php'?>
+        <?php include '../components/_header.php' ?>
+        <?php include '../service/_dbconnect.php' ?>
     </div>
     <!-- HOME -->
     <div class="container">
 
+        <div class="data">
+            <img src="../static/images/Screenshot 2023-02-06 003116.png" class="database">
 
-   
-    <div class="data">
-        <img src="static/images/Screenshot 2023-02-06 003116.png" class="database">
+        </div>
+        <div class="text-container">
+            <h1> Manage<br> Data Efficiently</h1>
+            <p>One stop destination to view store and mange data of
+                different techical events without having trouble
+            </p>
+            <?php
+            if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] != true) {
+                echo '
+        <a href="login.php">Login for more info</a>';
+            }
+            ?>
 
-
-    </div>
-    <div class="text-container">
-        <h1> Manage<br> Data Efficiently</h1>
-        <p>One stop destination to view store and mange data of
-            different techical events without having trouble
-        </p>
-        <?php
-        if(!isset($_SESSION['loggedin']) || $_SESSION["loggedin"]!=true){
-        echo'
-        <a href="partial/_login.php">Login for more info</a>';
-        }
-        ?>
-
-
-
-
-    </div>
+        </div>
     </div>
     <div class="typeOfhackathon">
         <div class="data">
-            <img src="static/images/Avishkar logo.jpg">
+            <img src="../static/images/Avishkar logo.jpg">
 
 
         </div>
@@ -67,14 +56,13 @@
                 Research Competition. An objective of this competition is to inculcate the research culture among the
                 students and encourage them further to convert their ideas into physical reality.</p>
 
-
         </div>
     </div>
 
 
     <div class="typeOfhackathon">
         <div class="data">
-            <img src="static/images/Hackathon logo.jpg">
+            <img src="../static/images/Hackathon logo.jpg">
 
 
         </div>
@@ -90,7 +78,7 @@
     </div>
     <div class="typeOfhackathon">
         <div class="data">
-            <img src="static/images/deepblue logo.jpg">
+            <img src="../static/images/deepblue logo.jpg">
 
 
         </div>
@@ -100,10 +88,10 @@
                 Inter-university
                 Research Competition. An objective of this competition is to inculcate the research culture among the
                 students and encourage them further to convert their ideas into physical reality.</p>
-             </div>
         </div>
-        <!-- FOOTER -->
-        <?php include 'partial/_footer.php' ?>
+    </div>
+    <!-- FOOTER -->
+    <?php include '../components/_footer.php' ?>
 
 
     </div>
@@ -113,17 +101,7 @@
 
 
 
-
-
-
-
-
-
-
 </body>
 
 
 </html>
-
-
-

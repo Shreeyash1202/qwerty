@@ -27,8 +27,9 @@
     </style>
 </head>
 <body>
+    <?php include '../components/_header.php' ?>
 
-        <img src="tick.gif">
+        <img src="../static/images/tick.gif">
     <div class="success-message">
         
         Your record has been successfully inserted!
