@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results | Avishkar</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
     <style>
         .container {
             margin: auto;
@@ -17,21 +17,14 @@
 </head>
 
 <body>
-    <?php include 'partial/_header.php' ?>
+    <?php include '_header.php' ?>
     <div class="info-criteria">
         <div class="container">
            
 
             <?php
-            // Establish database connection
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "hack";
-
-            // Create a connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-
+             include '../service/_dbconnect.php';
+             
             // Check the connection
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());

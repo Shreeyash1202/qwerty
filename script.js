@@ -22,13 +22,13 @@ function createStudentDiv() {
 
   studentDiv.innerHTML = `
   <br><br>
+  <h4>Enter student Details for Student ${i+1}</h4>
     <label for="sid">Student ID*</label>
-    <h4>Enter student Details for Student ${i+1}</h4>
-    <input type="sid" id="sid" name="sid${i}" placeholder="sid" aria-describedby="emailHelp"
+    <input type="sid" id="sid" name="sid${i}" placeholder="Student ID eg. 2021PE0275" aria-describedby="emailHelp"
         required>
     
     <label for="s_name">Student Name*</label>
-    <input type="s_name" id="s_name${i}" name="s_name${i}" placeholder="s_name"
+    <input type="s_name" id="s_name${i}" name="s_name${i}" placeholder="Student Full Name"
         aria-describedby="emailHelp" required>
     <br>
     <label for="dept">Select The Department*</label> <br>
@@ -45,12 +45,13 @@ function createStudentDiv() {
         <option>AUTOMOBILE</option>
     </select>
     <br>
+    <br>
     <label for="s_PH_no">Student Mobile number*</label>
-    <input type="s_PH_no" id="s_PH_no${i}" name="s_PH_no${i}" placeholder="s_PH_no"
+    <input type="s_PH_no" id="s_PH_no${i}" name="s_PH_no${i}" pattern="^[0-9]{10,}$" placeholder="Student Mobile number"
         aria-describedby="emailHelp" required>
     <br>
     <label for="s_email">Student Email id*</label>
-    <input type="s_email" id="s_email${i}" name="s_email${i}" placeholder="s_email"
+    <input type="s_email" id="s_email${i}" name="s_email${i}" placeholder="MES Email id "
         aria-describedby="emailHelp" required>
     <br>
     </div>

@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($mpin == $row['mpin']) {
             $_SESSION['loggedin'] = true;
 
-            header("Location: ../report.php?login=true");
+            header("Location: ../pages/report.php?login=true");
             exit();
         } else {
             $error = "Wrong Password";
-            header("Location: ../mpin.php?login=false&error=$error");
+            header("Location: ../pages/mpin.php?login=false&error=$error");
             exit();
         }
     }
