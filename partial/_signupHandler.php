@@ -31,7 +31,7 @@
                 $result=mysqli_query($conn,$sql);
                 if($result){
                     $alert=true;
-                    header("Location:_coordinatorredirect.html?signup=true");
+                    header("Location:_redirect.php?signup=true");
                     exit();
                 }
             }

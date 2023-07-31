@@ -23,7 +23,9 @@
 <body>
 <?php include 'partial/_header.php'?>
 
-
+<?php
+        if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]=true){
+        echo '
 <div class="container">
     <h1 class="signup-head">Add Coordinator </h1>
         <hr>
@@ -99,7 +101,15 @@
         </form>
         <hr>
     </div>
-
+    ';
+}else{
+    echo'
+    <div class="notlogged">
+    <h2>*Access Denied.Please login *</h2>
+        <p>Login or signup in the Navigation bar</p>
+    </div>';
+}
+?>
     </body>
 </html>
 

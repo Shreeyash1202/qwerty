@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
     <link rel="stylesheet" href="../static/style.css">
 </head>
 
@@ -49,9 +49,14 @@
                 <button type="submit" class="subbtn">Submit</button>
             </div>
         </form>
+        <?php
+    if (isset($_GET['login']) && $_GET['login'] === 'false' && isset($_GET['error'])) {
+        echo "<script>alert('Error: " . $_GET['error'] . "');</script>";
+    }
+    ?>
         <hr>
     </div>
-
+   
 
     <?php include '_footer.php';?>
     <script src="../static/script.js"></script>

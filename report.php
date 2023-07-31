@@ -65,8 +65,14 @@
 </style>
 
 <body>
-    <?php include 'partial/_header.php' ?>
+   <?php include 'partial/_header.php' ?>
+   <?php
+    // Only display the page content if $login is true
+    if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]=true){
+    ?>
 
+ 
+   
 
     <div class="container">
         <h1 class="signup-head">Group Details</h1>
@@ -77,9 +83,9 @@
             <a class="alinks active-link" onclick="openlink('mentor' )">Mentor details</a>
             <a class="alinks active-link" onclick="openlink('Student')">Student details</a>
         </div>
-
+        
         <form action="/main/qwerty/partial/_reportHandler.php"  method="post" id="groupForm">
-            <div>
+      <div>
                 <div class="link-content active hidden"  >
                     <h4>Enter Group Details</h4>
                     <!-- SIGNUP FORM -->
@@ -103,6 +109,8 @@
                             <option value="" selected disabled>
                                 --Select Your Event--
                             </option>
+                           
+                       
                             <?php
                             if ($_SESSION['hackathon'] == "Avishkar") {
                                 echo '
@@ -135,6 +143,7 @@
                         <button type="button" onclick="openlink('mentor')" class="subbtn">Next</button>
                     </div>
                 </div>
+            
 
                 <!-- MENTOR DETAILS -->
                 <div class="link-content hidden" id="mentor">
@@ -188,11 +197,21 @@
 
     </div>
     </form>
+
     <hr>
     </div>
 
 
     <script src="script.js"></script>
+    <?php
+    } else {
+         echo'
+        <div class="notlogged">
+        <h2>*Access Denied *</h2>
+           <p>Please login <p> 
+        </div>';
+    }
+    ?>
 </body>
 
 </html>
