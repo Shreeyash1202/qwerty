@@ -1,14 +1,15 @@
 <!-- process_data.php -->
 <?php
-include 'partial/_dbconnect.php';
+include '_dbconnect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $team_name = $_POST['team_name'];
     $faculty_id = $_POST['m_id'];
     $year = $_POST['year'];
+    $gender = $_POST['gender'];
 
     // Perform database query to fetch data based on the submitted form data
-    $sql = "SELECT * FROM events WHERE team_name='$team_name' AND faculty_name='$faculty_name' AND year='$year'";
+    $sql = "SELECT * FROM events WHERE team_name='$team_name' AND faculty_name='$faculty_id' AND year='$year' AND event='$event'AND gender='$gender'";
     $result = mysqli_query($conn, $sql);
 
     // Check if data is available
@@ -18,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Team Name: " . $row['team_name'] . "<br>";
             echo "Faculty Name: " . $row['faculty_name'] . "<br>";
             echo "Year: " . $row['year'] . "<br>";
+            echo "Gender: " . $row['gender'] . "<br>";
             // Display other data as needed
             echo "<hr>";
         }

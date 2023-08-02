@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <style>
@@ -21,7 +21,7 @@
     }
 </style>
 <body>
-<?php include 'partial/_header.php'?>
+<?php include '../components/_header.php'?>
 
 <?php
         if(isset($_SESSION['loggedin'])&&$_SESSION["loggedin"]=true){
@@ -30,7 +30,7 @@
     <h1 class="signup-head">Add Coordinator </h1>
         <hr>
     <!-- SIGNUP FORM -->
-        <form action ="/main/qwerty/partial/_signupHandler.php"  method="post" >
+        <form action ="/main/qwerty/service/_signupHandler.php"  method="post" >
             <div class="signup-form">
                 <label for="username" >Username*</label>
                 <input type="username"  id="username" name="username" placeholder="Username" aria-describedby="emailHelp" required>
@@ -57,7 +57,8 @@
                         <option>MECH</option>
                         <option>AUTOMOBILE</option>
                     </select>
-<br><br>
+                                <br><br>
+
                 <label for="event">Select The Event*</label><br>
                
                 <select name="hackathon" type="text" required="required" data-error="Please specify your need.">
@@ -68,13 +69,13 @@
                         <option>DeepBlue</option>
                         <option>Avishkar</option>
                     
-
+                       
                     <br><br>
                  <label for="term">Term*</label>
                  <input type="date" id="term" name="term" required>
 
                  <label for="contact">Phone no:*</label> 
-                <input type="tel" id="contact" name="contact" required>
+                <input type="tel" id="contact" name="contact" pattern="^[0-9]{10,}$" required>
 
 
 
@@ -110,6 +111,7 @@
     </div>';
 }
 ?>
+<?php include '../components/_footer.php' ?>
     </body>
 </html>
 

@@ -46,12 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if (!$mentor_result) {
                 $error = "cannot insert mentor data: ";
-                header("Location: /qwerty/index.php?insertMentor=false&error=$error");
+                header("Location: /qwerty/pages/index.php?insertMentor=false&error=$error");
                 exit();
             }
         } else {
             $error = "cannot insert group data: ";
-            header("Location: /qwerty/index.php?insertGroup=false&error=$error");
+            header("Location: /qwerty/pages/index.php?insertGroup=false&error=$error");
             exit();
         }
     }
@@ -64,6 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $dept = $_POST["dept" . $i];
         $s_PH_no = $_POST["s_PH_no" . $i];
         $s_email = $_POST["s_email" . $i];
+        $gender = $_POST["gender" . $i];
+        $a_year = $_POST["a_year" . $i];
 
         // Store student data as an associative array in the main array
         $student_details = array(
@@ -71,8 +73,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "g_id" => $g_id,
             "s_name" => $s_name,
             "dept" => $dept,
-            "ph_no" => $s_PH_no,
-            "s_email" => $s_email
+            "s_ph_no" => $s_PH_no,
+            "s_email" => $s_email,
+            "gender" => $gender,
+            "a_year" => $a_year
         );
 
         // Add the student details array to the main array
@@ -83,14 +87,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     foreach ($students_data as $student) {
         $values[] = "('" . implode("', '", $student) . "')";
     }
-    $sql = "INSERT INTO `student` (s_id, g_id, s_name, dept, s_ph_no, s_email) VALUES " . implode(", ", $values);
+    $sql = "INSERT INTO `student` (s_id, g_id, s_name, dept, s_ph_no, s_email,gender,a_year) VALUES " . implode(", ", $values);
 
     if ($conn->query($sql) === TRUE) {
-        header("Location:_redirect.php?insert=true");
+        header("Location:../components/_redirect.php?insert=true");
         exit();
     } else {
         $error = "cannot insert student data: ";
-        header("Location: /qwerty/index.php?insertStudent=false&error=$error");
+        header("Location: /qwerty/pages/index.php?insertStudent=false&error=$error");
     }
 }
 ?>

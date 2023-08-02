@@ -27,19 +27,16 @@
     </style>
 </head>
 <body>
+    <?php include '../components/_header.php' ?>
 
-        <img src="tick.gif">
+        <img src="../static/images/tick.gif">
     <div class="success-message">
         
         Your record has been successfully inserted!
     </div>
-    <button class="add-data-button" onclick=" goBack()">Add More Data</button>
+  <a href=../pages/report.php>  <button class="add-data-button" >Add More Data</button></a>
     
-    <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
+  
      
 </body>
 </html>

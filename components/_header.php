@@ -8,9 +8,9 @@ echo '
 </div>
   <div class="rightnav">
     <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="info.php">Info</a></li>
-      <li><a href="about.php">About</a></li>
+      <li><a href="../pages/index.php">Home</a></li>
+      <li><a href="../pages/info.php">Info</a></li>
+      <li><a href="../pages/about.php">About</a></li>
     </ul>';
 
     // Guest
@@ -22,7 +22,7 @@ echo '
       elseif(isset($_SESSION["loggedin"])&&$_SESSION["loggedin"]==true&&$_SESSION['role']==1){
         echo'
         <ul>
-        <li><a href="partial/mpin.php">Report</a></li>
+        <li><a href="../pages/mpin.php">Report</a></li>
         </ul>
         ';
       }
@@ -30,7 +30,7 @@ echo '
       elseif(isset($_SESSION["loggedin"])&&$_SESSION["loggedin"]==true&&$_SESSION['role']==2){
       echo'
       <ul>
-      <li><a href="addCoordinator.php">Add coordinator</a></li>
+      <li><a href="../pages/addCoordinator.php">Add coordinator</a></li>
       </ul>
       '
       // Option to add coordinator
@@ -38,14 +38,14 @@ echo '
      }
       else{
       echo'
-      <a class="login-btn" href="partial/_login.php">Login</a>';
+      <a class="login-btn" href="../pages/login.php">Login</a>';
     }
 
     // If logged in show name
     if(isset($_SESSION["loggedin"])&&$_SESSION["loggedin"]==true){
       echo'
       <p class ="logintxt">Welcome '.$_SESSION['username'].'</p>
-      <a class="logout-btn" href="partial/_logout.php">Logout</a>
+      <a class="logout-btn" href="../service/_logout.php">Logout</a>
       ';
     }
 

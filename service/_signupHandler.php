@@ -22,7 +22,7 @@
         $numRows=mysqli_num_rows($result);
         if($numRows>0){
             $error="Email already in use";
-            header("Location: /qwerty/index.php?signup=false&error=$error");
+            header("Location: /qwerty/pages/index.php?signup=false&error=$error");
         }
         else{
             if($pass==$pass2 && $mpin==$mpin2){
@@ -31,13 +31,13 @@
                 $result=mysqli_query($conn,$sql);
                 if($result){
                     $alert=true;
-                    header("Location:_redirect.php?signup=true");
+                    header("Location:../components/_redirect.php?signup=true");
                     exit();
                 }
             }
             else{
                 $error="Passwords do not match";
-                header("Location:../index.php?signup=false&error=$error");
+                header("Location:../pages/index.php?signup=false&error=$error");
             }
         }
 

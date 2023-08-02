@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About|Data hub</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
 
 
 </head>
@@ -61,14 +61,14 @@
 
 <body>
 <div class="main">
-<?php include 'partial/_header.php'?>
+<?php include '../components/_header.php'?>
 </div><br><br>
     <h1>About Us</h1>
     <div class="container">
     <!-- Top Images -->
    
         <center>
-            <img src="static/images/about2.png" alt="Sample Image 4" width="550" height="350" >
+            <img src="../static/images/about2.png" alt="Sample Image 4" width="550" height="350" >
             </center>
 
       
@@ -83,7 +83,7 @@
             <br><br><br>
     <!-- Section: Data -->
     <div class="image-wrapper">
-        <img src="static/images/data.png" alt="Sample Image 1" width="300" height="250">
+        <img src="../static/images/data.png" alt="Sample Image 1" width="300" height="250">
     </div>
     <div class="description">
         <p>
@@ -97,7 +97,7 @@
 
     <!-- Section: Security -->
     <div class="image-wrapper">
-        <img src="static/images/securtiy.png" alt="Sample Image 2"width="300" height="250">
+        <img src="../static/images/securtiy.png" alt="Sample Image 2"width="300" height="250">
     </div>
     <div class="description">
         <p>
@@ -111,7 +111,7 @@
 
     <!-- Section: Efficiency -->
     <div class="image-wrapper">
-        <img src="static/images/effencicy.png" alt="Sample Image 3"width="300" height="250">
+        <img src="../static/images/effencicy.png" alt="Sample Image 3"width="300" height="250">
     </div>
     <div class="description">
         <p>
@@ -131,7 +131,7 @@
     </div>
     </div>
 <!-- FOOTER -->
-<?php include 'partial/_footer.php' ?>
+<?php include '../components/_footer.php' ?>
 </body>
 
 </html>

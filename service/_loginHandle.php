@@ -25,12 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $result = mysqli_query($conn, $sql);
 
             // Redirect to the main page with a successful login message
-            header("Location: /main/qwerty/index.php?login=true");
+            header("Location: /main/qwerty/pages/index.php?login=true");
             exit; // Terminate script execution for "Guest" login
         } else {
             // Redirect to the main page with an error message for invalid email domain
-           
-            header("Location:_login.php?login=false&error= Only emails with mes domain are allowed for Guest login.");
+            echo "<script>alert('Invalid login. Only emails with mes domain are allowed for Guest login.');</script>";
+    
+            header("Location:../pages/login.php?login=false&error= Only emails with mes domain are allowed for Guest login.");
             exit; // Terminate script execution for invalid email domain
         }
     } else if ($role === 'Coordinator') {
@@ -42,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         // Handle invalid role selection
         $error = 'Invalid role';
-        header("Location: /main/qwerty/index.php?login=false&error=$error");
+        header("Location: /main/qwerty/pages/index.php?login=false&error=$error");
         exit; // Terminate script execution for other invalid roles
     }
 
@@ -78,30 +79,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $_SESSION['role'] = $role;
 
                     // Redirect to the main page with a successful login message
-                    header("Location: /main/qwerty/index.php?login=true");
+                    header("Location: /main/qwerty/pages/index.php?login=true");
                     exit; // Terminate script execution for successful login
                 } else {
                     // Redirect to the main page with an error message for wrong password
                     $error = "Wrong Password";
-                    header("Location: /main/qwerty/index.php?login=false&error=$error");
+                    header("Location: /main/qwerty/pages/index.php?login=false&error=$error");
                     exit; // Terminate script execution for wrong password
                 }
             } else {
                 // Redirect to the main page with an error message for invalid username
                 $error = 'Unable to login';
-                header("Location: /main/qwerty/index.php?login=false&error=$error");
+                header("Location: /main/qwerty/pages/index.php?login=false&error=$error");
                 exit; // Terminate script execution for invalid username
             }
         } else {
             // Redirect to the main page with an error message for database query error
             $error = 'Database query error';
-            header("Location: /main/qwerty/index.php?login=false&error=$error");
+            header("Location: /main/qwerty/pages/index.php?login=false&error=$error");
             exit; // Terminate script execution for database query error
         }
     } else {
         // Redirect to the main page with an error message for other invalid roles
         $error = 'Invalid role';
-        header("Location: /main/qwerty/index.php?login=false&error=$error");
+        header("Location: /main/qwerty/pages/index.php?login=false&error=$error");
         exit; // Terminate script execution for other invalid roles
     }
 }

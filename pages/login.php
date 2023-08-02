@@ -11,18 +11,7 @@
 
 <body>
   <!-- NAVBAR -->
-    <div class="navbar">
-        <div class="nav-logo">
-            <h3>Data Hub</h3>
-        </div>
-        <div class="rightnav">
-            <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../info.php">Info</a></li>
-                <li><a href="../about.php">About</a></li>
-            </ul>
-        </div>
-    </div>
+  <?php include '../components/_header.php'?>
 
 
     <div class="container">
@@ -30,7 +19,7 @@
         <hr>
 
           <!-- Form -->
-        <form action="/main/qwerty/partial/_loginHandle.php" method="post">
+        <form action="/main/qwerty/service/_loginHandle.php" method="post">
             <div class="login-form">
 
             <label for="role">Enter your Role</label>
@@ -58,8 +47,9 @@
     </div>
    
 
-    <?php include '_footer.php';?>
+    <?php include '../components/_footer.php' ?>
     <script src="../static/script.js"></script>
+  
 </body>
 
 </html>
