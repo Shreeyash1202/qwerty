@@ -29,9 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit; // Terminate script execution for "Guest" login
         } else {
             // Redirect to the main page with an error message for invalid email domain
+<<<<<<< HEAD
             echo "<script>alert('Invalid login. Only emails with mes domain are allowed for Guest login.');</script>";
     
             header("Location:../pages/login.php?login=false&error= Only emails with mes domain are allowed for Guest login.");
+=======
+           
+            header("Location:login.php?login=false&error= Only emails with mes domain are allowed for Guest login.");
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
             exit; // Terminate script execution for invalid email domain
         }
     } else if ($role === 'Coordinator') {

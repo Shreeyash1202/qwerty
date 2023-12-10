@@ -43,6 +43,7 @@
                     <br>
                     <label for="g_id">Group ID:</label>
                     <input type="text" name="g_id" id="g_id" placeholder="Enter group ID eg. 2023E124">
+<<<<<<< HEAD
                     <br>
                     <label for="project_title">Project Title:</label>
                     <input type="text" name="project_title" id="project_title" placeholder="Enter Project Title">
@@ -55,6 +56,12 @@
                         <!-- Add more options for different events -->
                     </select>
                     <br>
+=======
+
+                    <label for="project_title">Project Title:</label>
+                    <input type="text" name="project_title" id="project_title" placeholder="Enter Project Title">
+
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
                     <label for="event">Select Event:</label>
                     <select name="event" id="event">
                         <option value="DeepBlue">DeepBlue</option>

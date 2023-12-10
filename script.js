@@ -46,6 +46,7 @@ function createStudentDiv() {
     </select>
     <br>
     <br>
+<<<<<<< HEAD
     <label for="a_year">Academic Year*</label> <br>
     <select name="a_year${i}" type="text" required="required"
         data-error="Please specify your need.">
@@ -60,6 +61,8 @@ function createStudentDiv() {
     </select>
     <br>
     <br>
+=======
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
     <label for="s_PH_no">Student Mobile number*</label>
     <input type="s_PH_no" id="s_PH_no${i}" name="s_PH_no${i}" pattern="^[0-9]{10,}$" placeholder="Student Mobile number"
         aria-describedby="emailHelp" required>

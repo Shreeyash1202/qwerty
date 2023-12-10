@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Search Results </title>
     <link rel="stylesheet" href="../static/style.css">
      <!-- ... Other meta tags and styles ... -->
@@ -18,6 +19,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.17/jspdf.plugin.autotable.min.js"></script>
    
    
+=======
+    <title>Search Results | Avishkar</title>
+    <link rel="stylesheet" href="../static/style.css">
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
     <style>
         .container {
             margin: auto;
@@ -35,7 +40,10 @@
 
 <body>
     <?php include '_header.php' ?>
+<<<<<<< HEAD
     
+=======
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
     <div class="info-criteria">
    
         

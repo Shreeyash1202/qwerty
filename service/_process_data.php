@@ -9,7 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $gender = $_POST['gender'];
 
     // Perform database query to fetch data based on the submitted form data
+<<<<<<< HEAD
     $sql = "SELECT * FROM events WHERE team_name='$team_name' AND faculty_name='$faculty_id' AND year='$year' AND event='$event'AND gender='$gender'";
+=======
+    $sql = "SELECT * FROM events WHERE team_name='$team_name' AND faculty_name='$faculty_name' AND year='$year' AND event='$event'";
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
     $result = mysqli_query($conn, $sql);
 
     // Check if data is available

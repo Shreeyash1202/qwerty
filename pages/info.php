@@ -81,7 +81,11 @@
       <hr>
     </div>
   </div>
+<<<<<<< HEAD
   <?php include '../components/_footer.php' ?>
+=======
+  <?php include 'partial/_footer.php' ?>
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
 </body>
 
 

@@ -130,12 +130,21 @@
                         <label for="year">Year :</label><br>
                         <select name="year" id="yr">
                             <option value="select">--Select Year--</option>
+<<<<<<< HEAD
                             <option value="2018">2018-19</option>
                             <option value="2019">2019-20</option>
                             <option value="2020">2020-21</option>
                             <option value="2021">2021-22</option>
                             <option value="2022">2022-23</option>
                             <option value="2023">2023-24</option>
+=======
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+>>>>>>> 3773dd6a04f3e40c60efb98ea27f59c0ce44937e
                         </select><br><br>
 
                         <label for="results">Results :</label><br>
