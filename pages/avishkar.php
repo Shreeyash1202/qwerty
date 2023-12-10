@@ -40,13 +40,13 @@
                     <option value="2022">2022-23</option>
                     <option value="2023">2023-24</option>
                 </select>
-
+                    <br>
                     <label for="g_id">Group ID:</label>
                     <input type="text" name="g_id" id="g_id" placeholder="Enter group ID eg. 2023E124">
-
+                    <br>
                     <label for="project_title">Project Title:</label>
                     <input type="text" name="project_title" id="project_title" placeholder="Enter Project Title">
-
+                    <br>
                     
                     <label for="gender">Select gender:</label>
                     <select name="gender" id="gender">
@@ -56,11 +56,13 @@
                         <option value="">None</option>
                         <!-- Add more options for different events -->
                     </select>
+                    <br>
                     <label for="event">Select Event:</label>
                     <select name="event" id="event">
                         <option value="Avishkar">Avishkar</option>
                         <!-- Add more options for different events -->
                     </select>
+                    <br>
                     <button type="submit" class="subbtn">Search</button>
                 </form>';
             } else {
